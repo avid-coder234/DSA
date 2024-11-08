@@ -1,0 +1,50 @@
+Approach 1
+k = target sum 
+l = 0;
+r = 0;
+maxlen = 0;
+sum = 0
+n = arr.length()
+// Loop traverse krne k liye
+while(r < n){
+    sum = sum + arr[r];
+
+    // Ye while loop isliye kyuki window ko check krna hai 
+    // ki agr vo bada ho toh shrink hota jaye
+    while(sum > k){
+        sum = sum - arr[l];
+        l = l + 1;
+    }
+    // Main condition check 
+    if(sum <= k){
+        maxlen = max(maxlen,l-r+1);
+        // If ask subarray then store l and r in new variable
+    }
+    r = r + 1;
+}
+TC - O (2N);
+sc - 0 (1);
+
+Approach 2
+Approach 1
+k = target sum 
+l = 0;
+r = 0;
+maxlen = 0;
+sum = 0
+n = arr.length()
+// Loop traverse krne k liye
+while(r < n){
+    sum = sum + arr[r];
+
+    if(sum > k){
+        sum = sum - arr[l];
+        l = l + 1;
+    }
+    // Main condition check 
+    if(sum <= k){
+        maxlen = max(maxlen,l-r+1);
+        // If ask subarray then store l and r in new variable
+    }
+    r = r + 1;
+}
