@@ -21,8 +21,6 @@ void PrintF(int index , int arr[] , vector<int> &ds,int n,int sum,int s){
     ds.pop_back();
     PrintF(index + 1,arr,ds,n,sum,s);
 
-
-
 }
 
 
